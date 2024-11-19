@@ -1,5 +1,5 @@
 #Не храним папку Bitrix в GIT
- #/bitrix/*
+ /bitrix/*
  #But not the templates and non bitrix components
  !/bitrix/templates
  !/bitrix/components
