@@ -17,3 +17,8 @@ $vendorAutoload = __DIR__ . '/vendor/autoload.php';
 if (file_exists($vendorAutoload)) {
     require_once $vendorAutoload;
 }
+
+$modelsAutoload = $_SERVER['DOCUMENT_ROOT'] . '/local/app/autoload.php';
+if (file_exists($modelsAutoload)) {
+    require_once $modelsAutoload;
+}
