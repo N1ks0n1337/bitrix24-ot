@@ -12,15 +12,14 @@ class OtusFileExceptionHandlerLog extends FileExceptionHandlerLog
      * @param \Throwable $exception
      * @param int        $logType
      */
-    public function write(\Throwable $exception, int $logType): void
+    public function write($exception, $logType)
     {
         $formatter = new ExceptionHandlerFormatter();
-        $message = $formatter->format($exception, $logType);
+        $message   = $formatter->format($exception, $logType);
 
         $timestamp = date('Y-m-d H:i:s');
-        $line = '[' . $timestamp . '] OTUS ' . $message . PHP_EOL;
+        $line      = '[' . $timestamp . '] OTUS ' . $message . PHP_EOL;
 
-        // добавляем запись в файл лога
         file_put_contents(
             $this->logFile,
             $line,
