@@ -29,3 +29,6 @@ $modelsAutoload = $_SERVER['DOCUMENT_ROOT'] . '/local/app/autoload.php';
 if (file_exists($modelsAutoload)) {
     require_once $modelsAutoload;
 }
+
+\Bitrix\Main\Loader::includeModule('main');
+\Bitrix\Main\Page\Asset::getInstance()->addJs('/local/js/start_day_override.js');
