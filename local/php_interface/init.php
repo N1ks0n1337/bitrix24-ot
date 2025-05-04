@@ -1,4 +1,11 @@
 <?php
+require_once __DIR__ . '/BookingProcedureProp.php';
+use Bitrix\Main\EventManager;
+EventManager::getInstance()->addEventHandler(
+    'iblock',
+    'OnIBlockPropertyBuildList',
+    ['BookingProcedureProp', 'GetUserTypeDescription']
+);
 
 define(
     'DEBUG_FILE_NAME',
